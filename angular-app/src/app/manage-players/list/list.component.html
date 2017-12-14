@@ -1,0 +1,22 @@
+<div class="contentbox">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Player Name</th>
+        <th>Preferred Position</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of player_list">
+        <td scope="row">{{player.name}}</td>
+        <td>{{player.position}}</td>
+        <td>
+          <form (submit)="Delete(player._id)">
+            <button type="submit" name="" id="" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

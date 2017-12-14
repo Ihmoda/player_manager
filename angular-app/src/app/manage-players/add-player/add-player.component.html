@@ -1,0 +1,8 @@
+<div class="contentbox">
+<h1>Add Player</h1>
+<form (submit)='addPlayer()'>
+  Player Name: <input type="text" name="playername" [(ngModel)]='new_player.name' placeholder="Enter player name">
+  Preferred Position: <input type="text" name="playerposition" [(ngModel)]='new_player.position'  placeholder="Enter player position">
+  <button type="submit">Add</button>
+</form>
+</div>

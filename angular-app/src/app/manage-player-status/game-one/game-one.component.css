@@ -1,0 +1,30 @@
+.contentbox {
+    height: 500px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.green, red, yellow, white {
+    margin: 5px !important;
+}
+

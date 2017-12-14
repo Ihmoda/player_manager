@@ -1,0 +1,50 @@
+<div class="contentbox">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Player Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let player of player_list'>
+        <td scope="row">{{player.name}}</td>
+        <td>
+          <div class="row" *ngIf="game_num==1">
+            <form (submit)="playing(player._id, 'playing', player)">
+              <button type="submit" [ngClass]='{green: player.game_1 == true}'>Playing</button>
+            </form>
+            <form (submit)="playing(player._id, 'notplaying', player)">
+              <button type="submit" [ngClass]='{red: player.game_1 == false}'>Not Playing</button>
+            </form>
+            <form (submit)="playing(player._id, 'undecided', player)">
+              <button type="submit" [ngClass]='{yellow: player.game_1 == null}'>Undecided</button>
+            </form>
+          </div>
+          <div class="row" *ngIf="game_num==2">
+            <form (submit)="playing(player._id, 'playing', player)">
+              <button type="submit" [ngClass]='{green: player.game_2 == true}'>Playing</button>
+            </form>
+            <form (submit)="playing(player._id, 'notplaying', player)">
+              <button type="submit" [ngClass]='{red: player.game_2 == false}'>Not Playing</button>
+            </form>
+            <form (submit)="playing(player._id, 'undecided', player)">
+              <button type="submit" [ngClass]='{yellow: player.game_2 == null}'>Undecided</button>
+            </form>
+          </div>
+          <div class="row" *ngIf="game_num==3">
+            <form (submit)="playing(player._id, 'playing', player)">
+              <button type="submit" [ngClass]='{green: player.game_3 == true}'>Playing</button>
+            </form>
+            <form (submit)="playing(player._id, 'notplaying', player)">
+              <button type="submit" [ngClass]='{red: player.game_3 == false}'>Not Playing</button>
+            </form>
+            <form (submit)="playing(player._id, 'undecided', player)">
+              <button type="submit" [ngClass]='{yellow: player.game_3 == null}'>Undecided</button>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
