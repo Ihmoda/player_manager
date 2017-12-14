@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player'
-import { BehaviorSubject } from 'Rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 
