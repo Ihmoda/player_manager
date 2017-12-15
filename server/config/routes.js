@@ -1,5 +1,5 @@
 //here we load the modules that we reated on the server.js page
-var Player = require('./controllers/Player.js');
+var Player = require('./controllers/player.js');
 var path = require("path");
 
 module.exports = function (app) {
